@@ -1,38 +1,99 @@
-.App {
-  text-align: center;
+
+
+.custom-button {
+  background-color: #aa79b3;
+  color: rgb(0, 0, 0); 
+  border: none; 
+  border-radius: 5px; /* Rounded corners */
+  padding: 10px 20px;
+  font-size: 16px; 
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease; /* Smooth transition */
+  outline:auto; 
+  display: block; 
+  margin: 20px auto; /* Center the button with auto margins */
+  width: fit-content; /* Adjust the button width to fit its content */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.custom-button:hover {
+  background-color: #6e5174; /* Darker shade on hover */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.button-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: center; /* Center the button horizontally */
+  margin-top: 20px; /* Add margin to space it from the paintings */
+}
+
+.painting-container {
+  display: flex;
+  justify-content: center; /* Center items horizontally */
+  align-items: flex-start; /* Align items at the top */
+  flex-wrap: wrap; /* Allow wrapping to the next line if theres not enough space */
+  gap: 20px; /* Space between paintings */
+  padding: 20px; /* Padding around the container */
+}
+
+.painting-container > div {
+  
+  background-color: #f0f0f0; 
+  padding: 20px; /* Padding so paintings dont touch the border */
+  border: 1px solid #ccc; /* Border */
+  border-radius: 8px; /* Rounded corners */
+  text-align: center;
+  height:600px;
+  width: 500px;
+  display: flex; /* Use flexbox for the content inside */
+  flex-direction: column; /* Stack content vertically */
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+
+.painting-container h2 {
+  color: #333;
+  margin: 0; 
+  padding-bottom: 10px; /* Add some space below the title */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.painting-container p {
+  color: #666;
+  margin: 5px 0; 
+}
+
+.painting-container img {
+  max-width: 100%;
+  max-height: 100%;
+  height: auto; /* Maintain aspect ratio */
+  object-fit: contain; /* Maintain aspect ratio within the fixed height */
+  margin: 0 auto; /* Center the image */
+}
+
+.single-painting-container {
+  display: flex;
+  justify-content: center; /* Center items horizontally */
+  align-items: flex-start; /* Align items at the top */
+  flex-wrap: wrap; /* Allow wrapping to the next line if theres not enough space */
+  gap: 20px; /* Space between paintings */
+  padding: 20px; /* Padding around the container */
+}
+
+.single-painting-container > div {
+  background-color: #f0f0f0; 
+  padding: 20px; /* Padding so paintings dont touch the border */
+  border: 1px solid #ccc; /* Border */
+  border-radius: 8px; /* Rounded corners */
+  text-align: center;
+  height:650px;
+  width: 500px;
+  display: flex; 
+  flex-direction: column; /* Stack content vertically */
+  justify-content: space-between; /* Distribute space between elements */
+}
+.single-painting-container img {
+  max-width: 100%;
+  height: auto; /* Maintain aspect ratio */
+  max-height: 400px; /* Set a maximum height for the images */
+  object-fit: contain; /* Maintain aspect ratio within the fixed height */
+  margin: 0 auto; /* Center the image */
 }
